@@ -18,7 +18,7 @@ async function handler(req, res) {
     }
 
     try {
-      const result = await todoCollection.insertOne({ task: todoTask });
+      const result = await todoCollection.insertOne({ task: todoTask, completed: 'false' });
       console.log(result);
       client.close();
       res.status(201).json({ message: 'Todo inserted!' });

@@ -32,15 +32,13 @@ export default function Home() {
     fetchTodos();
   }, []);
 
-
-
   async function addTodoHandler() {
     const todoTask = inputRef.current.value;
 
     try {
       const response = await fetch("/api/apipost", {
         method: "POST",
-        body: JSON.stringify({ todoTask }),
+        body: JSON.stringify({todoTask}),
         headers: {
           "Content-Type": "application/json",
         },

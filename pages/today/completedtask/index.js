@@ -58,6 +58,8 @@ const CompletedTask = () => {
               <p>
                 <span className="text-red-500">{todo.task.task}</span>
               </p>
+
+              <p>Completed:{todo.completed}</p>
               <button
                 onClick={() => deleteTodoHandler(todo._id, todo)}
                 className="btn ml-2 text-green-500 border border-red-500 bg-slate-50 px-2 py-2"
